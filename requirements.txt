@@ -1,0 +1,10 @@
+tensorflow==2.18.0
+numpy>=1.24.5
+pandas>=2.0.1
+scikit-learn>=1.2.2
+matplotlib>=3.7.1
+seaborn>=0.12.2
+flask>=2.3.2
+requests>=2.30.0
+gunicorn>=20.1.0
+python-dotenv>=1.0.0

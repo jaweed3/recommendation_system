@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Recommendation System</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Movie Recommender System</h1>
+                <p>A Content-Based Recommendation System build with TensorFlow</p>
+            </div>
+        </header>
+        <main class="container">
+            <section class="search-section">
+                <h2>Find Movie Recommendations</h2>
+                <div class="search-container">
+                    <input type="text" id="movie-search" placeholder="Enter a movie title..." class="type text">
+                    <button id="search-btn">Get Recommendations</button>
+                </div>
+            </section>
+
+            <section class="result-section" id="result-section">
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Finding Recommendations...</p>
+                </div>
+                <div class="hidden" id="error-massage"></div>
+                <div id="recommendations-container" class="hidden">
+                    <h2>Recommendations for <span id="movie-title"></span></h2>
+                    <div id="recommendations-list" class="recommendations-grid"></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <p>Content-Based Recommendation System Portfolio Project</p>
+                <p>Build with TensorFlow, flask, and ❤️</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
