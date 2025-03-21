@@ -33,5 +33,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         movieTitleElement.textContent = data.movie;
         recommendationsList.innerHTML = '';
+
+        data.recommendations.forEach(movie => {
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+
+            movieCard.innerHTML = `
+                <div class="movie-info>
+                    <h3 class="movie-title">${movie.title}</h3>
+                    <p class="movie-year">${movie.year}</p>
+                    <p class="movie-genre">${movie.genre}</p>
+                    <p class="similarity-score">${(movie.similarity_score * 100).toFixed(1)}%</p>
+                </div>
+            `;
+        })
     }
 })
