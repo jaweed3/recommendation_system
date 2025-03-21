@@ -46,6 +46,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="similarity-score">${(movie.similarity_score * 100).toFixed(1)}%</p>
                 </div>
             `;
-        })
+
+            recommendationsList.appendChild(movieCard);
+        });
+
+        recommendationsContainer.classList.remove('hidden');
+    }
+
+    // Function to show loading state
+    function showLoading() {
+        loadingElement.classList.remove('hidden');
+        errorMessageElement.classList.add('hidden');
+        recommendationsContainer.classList.add('hidden');
+    }
+
+    function hideLoading() {
+        loadingElement.classList.add('hidden');
+    }
+
+    function showError(message) {
+        hideLoading();
+        errorMessageElement.textContent = message;
+        errorMessageElement.classList.remove('hidden');
+        recommendationsContainer.classList.add('hidden');
     }
 })
