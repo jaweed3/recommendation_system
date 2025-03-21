@@ -70,4 +70,26 @@ document.addEventListener('DOMContentLoaded', function() {
         errorMessageElement.classList.remove('hidden');
         recommendationsContainer.classList.add('hidden');
     }
-})
+
+    searchBtn.addEventListener('click', function() {
+        const movieTitle = searchInput.value.trim();
+
+        if (movieTitle) {
+            getRecommendations(movieTitle);
+        } else {
+            showError('Please enter a movie title.');
+        }
+    });
+
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const movieTitle = searchInput.value.trim();
+
+            if (movieTitle) {
+                getRecommendations(movieTitle);
+            } else {
+                showError('Please enter a movie title.');
+            }
+        }
+    });
+});
